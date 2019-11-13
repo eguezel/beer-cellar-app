@@ -24,9 +24,9 @@ You can click on each beer to have more informations.
 
 ## Built with
 
-[React](https://reactjs.org/) - A JavaScript Library
-[react-router-dom](https://www.npmjs.com/package/react-router-dom) - A npm package to make routes
-[axios](https://www.npmjs.com/package/axios) -  A npm package to get API informations
+[React](https://reactjs.org/) - A JavaScript Library  
+[react-router-dom](https://www.npmjs.com/package/react-router-dom) - A npm package to make routes  
+[axios](https://www.npmjs.com/package/axios) -  A npm package to get API informations  
 [Punk API](https://punkapi.com/) - The API who provided informations
 
 ## Author 
