@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import axios from 'axios';
 import './App.css';
+import CtxBeers from './Components/CtxBeers';
+import Shelfs from './Components/Shelfs/Shelfs';
+import Shelf from './Components/Shelf/Shelf';
+import BeersList from './Components/BeersList/BeersList';
+import Beer from './Components/Beer/Beer'
 
-function App() {
+const App = () => {
+
+  const [beers, setBeers] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://api.punkapi.com/v2/beers')
+    .then(response => {
+      setBeers(response.data);
+    })
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CtxBeers.Provider value={beers}>
+        <Switch>
+          <Route exact path='/' render={props =>
+            <React.Fragment>
+              <Shelfs />
+              <BeersList />
+            </React.Fragment>
+          } />
+          <Route path='/beers/:id' render={props =>
+            <React.Fragment>
+              <Shelf />
+              <Beer />
+            </React.Fragment>
+          } />
+        </Switch>
+      </CtxBeers.Provider>
     </div>
   );
 }

@@ -1,0 +1,27 @@
+.beersList {
+  z-index: 50;
+  color: #fff;
+  top: 70px;
+  left: 21vw;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  width: 1000px;
+}
+
+.beersList p {
+  margin: 0;
+  font-size: 40px;;
+}
+
+.beersList a {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 122px;
+}
+
+.beersList a img {
+  width: 80px;
+  filter: drop-shadow(12px 5px 6px rgba(0,0,0,0.75));
+}

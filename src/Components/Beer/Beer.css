@@ -1,0 +1,32 @@
+.beer {
+  z-index: 50;
+  color: #FFF;
+  top: 80px;
+  left: 15vw;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 1000px;
+}
+
+.beer p {
+  width: 500px;
+}
+
+.beer img {
+  height: 314px;
+  filter: drop-shadow(12px 5px 6px rgba(0,0,0,0.75));
+}
+
+.beer a {
+  text-decoration: none;
+  color: #BBB;
+  font-weight: 600;
+}
+
+.description {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1%;
+  border-radius: 15px;
+}

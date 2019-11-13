@@ -1,0 +1,10 @@
+.shelfs {
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  padding-top: 100px;
+}
+
+.shelfs img {
+  margin-top: 200px;
+}
